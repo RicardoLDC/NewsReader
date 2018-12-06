@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.SearchViewActivity">
+    <LinearLayout
+        android:id="@+id/LL_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F70909"
+        >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/back" />
+        <!--<SearchView-->
+            <!--android:id="@+id/sv_search_text1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:iconifiedByDefault="false"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:searchMode="queryRewriteFromText"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:background="@drawable/searchview_background"-->
+            <!--/>-->
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="15dp"
+            android:drawableLeft="@drawable/icon_search"
+            android:hint="搜你想搜的"
+            android:maxLines="1"
+            android:inputType="text"
+            android:background="@null"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+
+            />
+        <RadioButton
+            android:id="@+id/query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:layout_marginRight="13dp"
+            android:text="搜索"
+            android:textAlignment="center" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/LL_1">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</RelativeLayout>
